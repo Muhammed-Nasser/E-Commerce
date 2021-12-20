@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>E-Ecommerce</title>
+		<link rel="icon" href="./res/img/iti_logo.png">
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<!-- Custom stlylesheet -->
+		<link  rel="stylesheet" href="./css/mianStyle.css"/>
+
+        <link rel="stylesheet" href="./css/product.css">
+		<script src="https://kit.fontawesome.com/d0259d1f22.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="topHeader_container">
+				<ul class="header-links pull-left">
+					<li><a href="tel:+0201090963906"><i class="fa fa-phone"></i><b> CALL US</b></a></li>
+					<li><a href="mailto:Electo@gmail.com"><i class="fa fa-envelope-o"></i><b> EMAIL</b></a></li>
+					<li><a onclick="goPosition()"><i class="fa fa-map-marker"></i><b> LOCATION</b></a></li>
+				</ul>
+				<ul class="header-links pull-right">
+					<li><a href="#"><i class="fa fa-user-o"></i><b> Sign in</b></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /TOP HEADER -->
+
+		<!-- HEADER -->
+		<header id="hed-con">
+			<div id="header">
+				<div class="header_container">
+					<div class="row_search">
+						<!-- LOGO -->
+						<div class="quarterSize">
+							<div class="header-logo">
+								<a href="#" class="logo">
+									
+									<img src="./res/img/iti_logo.png" alt="">
+								</a>
+								<div class="title-logo"> logo</div>
+								
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="halfSize">
+							<div class="header-search">
+								<form>
+									<select class="input-select">
+										<option value="0">All Categories</option>
+										<option value="1">Category 01</option>
+										<option value="1">Category 02</option>
+									</select>
+									<input class="input" placeholder="Search here">
+									<button class="search-btn">Search</button>
+								</form>
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+						<!-- ACCOUNT -->
+						<div class="quarterSize">
+							<div class="header-ctn">
+
+								<!-- Cart -->
+								<div class="cart">
+									<a id="basket" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-basket"></i>
+										<span id="basketNumber">0</span>
+									</a>
+								</div>
+								<!-- /Cart -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- /HEADER -->
+
+
+
+        <!--  single product details -->
+    <div class="page__content container">
+        <main class="product">
+          <!-- PRODUCT SUMMARY -->
+          <section class="product__summary">
+            <div class="summary__container">
+              <div class="summary__img" id="summary-img-container">
+                <div class="large_image_container">
+                  <img
+                    src="res/img/product01.png"
+                    alt=""
+                    class="large__img"
+                    id="main-img-view"
+                  />
+                  <div class="summary__arrow_right">
+                    <i class="fas fa-angle-right"></i>
+                  </div>
+                  <div class="summary__arrow_left">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
+                </div>
+                <div class="small__img__container">
+                  <img
+                    src="res/img/product03.png"
+                    alt=""
+                    class="small__img small__img-active"
+                  />
+                  <img src="res/img/product06.png" alt="" class="small__img" />
+                  <img src="res/img/product01.png" alt="" class="small__img" />
+                </div>
+              </div>
+  
+              <div class="summary__description">
+                <h1 class="medium-red-font">PRODUCT NAME</h1>
+                <div class="summary__review">
+                  <div class="summary__stars small-red-font">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <div class="summary_rvs">
+                    <p>10 Review(s)</p>
+                    <a href="#review-form" id="add-review"> | Add your review</a>
+                  </div>
+                </div>
+                <div class="summary__price">
+                  <span>
+                    <span id="price__span" class="price-current">569$</span>
+                    <span id="price__span" class="price-before">569$</span>
+                  </span>
+                  <span class="small-red-font">In stock</span>
+                </div>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. At ex
+                  suscipit amet id, natus eveniet laborum vel voluptatem odit
+                  laboriosam qui iure esse minima laudantium incidunt! Saepe nobis
+                  excepturi nisi.
+                </p>
+                <div class="summary__buy">
+                  <div class="summary__quantity">
+                    <span>QTY &nbsp;</span>
+                    <input type="number" min="1" />
+                  </div>
+  
+                  <a href="" class="btn" id="add-to-cart"> ADD TO CART</a>
+                </div>
+                <div class="summary__footer">
+                  <div class="wishlist">
+                    <a href="" id="add-to-wish">
+                      <i class="far fa-heart"></i>
+                      <span>ADD TO WISH LIST</span>
+                    </a>
+                  </div>
+                  <div class="compare">
+                    <a href="" id="add-to-compare">
+                      <i class="fas fa-th-list"></i>
+                      <span>ADD TO COMPARE</span>
+                    </a>
+                  </div>
+                  <div class="category">
+                    <span>CATEGORY :</span>
+                    <span>LAPTOP</span>
+                    <span>LOREM</span>
+                  </div>
+                  <div class="share__buttons">
+                    <span>SHARE:</span>
+                    <a href="" id="facebook-share"
+                      ><i class="fab fa-facebook-square"></i
+                    ></a>
+                    <a href="" id="twitter-share"
+                      ><i class="fab fa-twitter-square"></i
+                    ></a>
+                    <a href="" id="mail-share"><i class="fas fa-envelope"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+          <!-- <====== PRODUCT DETAILS ======> -->
+          <section class="product__details">
+            <!-- header start -->
+            <div class="details__header">
+              <hr />
+              <div class="details__header_titles">
+                <a href="#" class="small-red-font" id="description-tab-btn"
+                  >Description</a
+                >
+                <a href="#" class="small-red-font" id="details-tab-btn"
+                  >Details</a
+                >
+                <a href="#" class="small-red-font" id="reviews-tab-btn"
+                  >Reviews(3)</a
+                >
+              </div>
+            </div>
+            <!-- header end -->
+  
+            <!-- details start -->
+            <div class="details__section">
+              <!-- description start -->
+              <div class="details__description">
+                <p>
+                  Here you can put some information about your product.<br />
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veritatis molestiae ratione, rem, voluptatem nostrum cupiditate
+                  magnam esse aperiam adipisci ab dignissimos qui in beatae vitae
+                  at necessitatibus voluptatibus. Doloribus, quasi!
+                </p>
+              </div>
+              <!-- description end -->
+              <!-- details start -->
+              <div class="details__details">
+                <p>
+                  det Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque impedit, eaque expedita cum non saepe? Mollitia quasi
+                  placeat adipisci, necessitatibus architecto eveniet nulla
+                  deserunt id, ipsum quisquam in, dicta unde.
+                </p>
+              </div>
+              <!-- details end -->
+              <!-- reviews start -->
+              <div class="details__reviews">
+                <!-- rating col start -->
+                <div class="col__rating">
+                  <!-- overall rating -->
+                  <div class="row__stars">
+                    <span class="medium-black-font">4.5</span>
+                    <div class="row__stars__stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                  </div>
+  
+                  <!-- full review with progress - start -->
+                  <div class="col__full_stars_view">
+                    <!-- first -->
+                    <div class="row__meter" data-review-id="0">
+                      <div class="row__meter__value" style="width:30%"></div>
+                    </div>
+                    <!-- first -->
+                    <div class="row__meter" data-review-id="0">
+                      <div class="row__meter__value"></div>
+                    </div>
+                    <!-- first -->
+                    <div class="row__meter" data-review-id="0">
+                      <div class="row__meter__value"></div>
+                    </div>
+                    <!-- first -->
+                    <div class="row__meter" data-review-id="0">
+                      <div class="row__meter__value"></div>
+                    </div>
+                  </div>
+                  <!-- full review with progress - end ^ -->
+                </div>
+                <!-- rating col end ^ -->
+  
+                <!-- opinion col start -->
+                <div class="col__reviews">
+                  <!-- first opinion -->
+                  <div class="reviews__Review">
+                    <!-- header -->
+                    <div class="review__head">
+                      <h3 class="reviewer__name">John</h3>
+                      <span>15 jun 2020 , 08:00AM</span>
+                      <div class="reviewer__stars row__stars__stars">
+                        <div class="row__stars">
+                          <div class="row__stars__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- section -->
+                    <div class="reviewer__opinion">
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae doloremque neque tempora repellat, temporibus
+                        reprehenderit sequi deserunt nam odio amet quia facere
+                        consequuntur ex, harum, nihil cum quaerat nemo nobis?
+                      </p>
+                    </div>
+                  </div>
+  
+                 
+                  <!-- first opinion -->
+                  <div class="reviews__Review">
+                    <!-- header -->
+                    <div class="review__head">
+                      <h3 class="reviewer__name">John</h3>
+                      <span>15 jun 2020 , 08:00AM</span>
+                      <div class="reviewer__stars row__stars__stars">
+                        <div class="row__stars">
+                          <div class="row__stars__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- section -->
+                    <div class="reviewer__opinion">
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae doloremque neque tempora repellat, temporibus
+                        reprehenderit sequi deserunt nam odio amet quia facere
+                        consequuntur ex, harum, nihil cum quaerat nemo nobis?
+                      </p>
+                    </div>
+                  </div>
+  
+                 
+                  <!-- first opinion -->
+                  <div class="reviews__Review">
+                    <!-- header -->
+                    <div class="review__head">
+                      <h3 class="reviewer__name">John</h3>
+                      <span>15 jun 2020 , 08:00AM</span>
+                      <div class="reviewer__stars row__stars__stars">
+                        <div class="row__stars">
+                          <div class="row__stars__stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- section -->
+                    <div class="reviewer__opinion">
+                      <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae doloremque neque tempora repellat, temporibus
+                        reprehenderit sequi deserunt nam odio amet quia facere
+                        consequuntur ex, harum, nihil cum quaerat nemo nobis?
+                      </p>
+                    </div>
+                  </div>
+  
+                 
+  
+                  
+                </div>
+                <!-- opinion col end ^ -->
+                <!-- <div class="col__submit_review"> -->
+                <form class="col__submit_review" id="review-form">
+                  <input placeholder="Your Name" />
+                  <input placeholder="Your Email" />
+                  <textarea rows="4" placeholder="Your Review"></textarea>
+                  <label>Your Rating</label>
+                  <input type="submit" class="btn" value="submit" />
+                </form>
+                <!-- </div> -->
+              </div>
+  
+              <!-- reviews end -->
+              <!---------->
+  
+              <div style="font-weight: bold">
+                <br />HERE I WILL PUT SOME SORT OF THINGS BUT NOT NOW ...
+              </div>
+            </div>
+          </section>
+        </main>
+        <!---- <===| RELATED PRODUCTS |===> -->
+        <setion class="product related__products">
+          <h3 style="text-align: center">RELATED PRODUCTS</h3>
+          <div class="related__container">
+            <!-- arrows start -->
+            <div class="related__arrow_right">
+              <i class="fas fa-angle-right"></i>
+            </div>
+            <div class="related__arrow_left">
+              <i class="fas fa-angle-left"></i>
+            </div>
+            <!-- arrows end -->
+            <!-- product container start -->
+            <div class="related__container__scroll">
+              <div class="related__products__container">
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item start -->
+                <div class="related__item__container">
+                  <div class="related__item">
+                    <img src="res/img/product09.png" alt="" />
+                    <p class="related__item_category">category</p>
+                    <p class="related__item_name">Camera</p>
+                    <p class="related__item_price">
+                      <span class="price-current">$499</span>
+                      <span class="price-before">$500</span>
+                    </p>
+                    <div class="related__item__footer">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-th-list"></i>
+                      <i class="fas fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="related__item__drop">
+                    <a class="btn">
+                      <i class="fas fa-cart-plus"></i>
+                      Add to cart</a
+                    >
+                  </div>
+                </div>
+                <!-- ======================== -->
+                <!-- item end -->
+               
+              </div>
+              <!-- product container end ^ -->
+            </div>
+          </div>
+        </setion>
+      </div> -->
+
+
+		
+
+		<!-- NEWSLETTER -->
+		<div id="newsletter" class="section">
+			<div class="newsletter_container">
+				<div class="newsletter_row">
+					<div class="fullSize">
+						<div class="newsletter">
+							<p><strong>Follow Us On Social Media</strong></p>
+							<form>
+								<input class="input" type="email" placeholder="Enter Your Email">
+								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+							</form>
+							<ul class="newsletter-follow">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-pinterest"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /NEWSLETTER -->
+
+		<!-- FOOTER -->
+		<footer id="footer">
+			<!-- top footer -->
+			<div class="footer_section">
+				<div class="footer_container">
+					<div class="footer_row">
+						<div class="quarterSize">
+							<div class="footer">
+								<h3 class="footer-title">About Us</h3>
+								<p>Lorem reprehenderit alias natus, deserunt, perspiciatis recusandae velit illum? Impedit laboriosam provident deleniti dolorem ea. </p>
+								<ul class="footer-links">
+									<li><a href="tel:+0201090963906"><i class="fa fa-phone"></i> +02-010-906-3906</a></li>
+									<li><a href="mailto:Electo@gmail.com"><i class="fa fa-envelope-o"></i> Electro@gmail.com</a></li>
+									<li><a onclick="goPosition()"><i class="fa fa-map-marker"></i> Gleem Beach, San Stefano</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="quarterSize">
+							<div class="footer">
+								<h3 class="footer-title">Categories</h3>
+								<ul class="footer-links">
+									<li><a href="#">Hot deals</a></li>
+									<li><a href="#">Laptops</a></li>
+									<li><a href="#">Smartphones</a></li>
+									<li><a href="#">Cameras</a></li>
+									<li><a href="#">Accessories</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clearfix visible-xs"></div>
+
+						<div class="quarterSize">
+							<div class="footer">
+								<h3 class="footer-title">Information</h3>
+								<ul class="footer-links">
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Contact Us</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Orders and Returns</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="quarterSize">
+							<div class="footer">
+								<h3 class="footer-title">Service</h3>
+								<ul class="footer-links">
+									<li><a href="#">My Account</a></li>
+									<li><a href="#">View Cart</a></li>
+									<li><a href="#">Wishlist</a></li>
+									<li><a href="#">Track My Order</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="bottom-footer-container">
+					<div class="bottom-footer-row">
+						<div class="copyright">
+							<span class="copyright">
+								 <a target="_blank" href="#">copyright Team1</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /bottom footer -->
+		</footer>
+		<!-- /FOOTER -->
+		<script src="js/main.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>

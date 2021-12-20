@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>LogIn</title>
+	<link rel="icon" href="./res/img/iti_logo.png">
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<!-- Custom stlylesheet -->
+	<link rel="stylesheet" href="./css/style.css">
+
+	<link rel="stylesheet" href="./css/mianStyle.css" />
+
+	<script src="https://kit.fontawesome.com/d0259d1f22.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- TOP HEADER -->
+	<div id="top-header">
+		<div class="topHeader_container">
+			<ul class="header-links pull-left">
+				<li><a href="tel:+0201029149153"><i class="fa fa-phone"></i><b> CALL US</b></a></li>
+				<li><a href="mailto:rondom@gmail.com"><i class="fa fa-envelope-o"></i><b> EMAIL</b></a></li>
+				<li><a onclick="goPosition()"><i class="fa fa-map-marker"></i><b> LOCATION</b></a></li>
+			</ul>
+			<ul class="header-links pull-right">
+				<li><a href="#"><i class="fa fa-user-o"></i><b> Sign in</b></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /TOP HEADER -->
+
+	<!-- HEADER -->
+	<header id="hed-con">
+		<div id="header">
+			<div class="header_container">
+				<div class="row_search">
+					<!-- LOGO -->
+					<div class="quarterSize">
+						<div class="header-logo">
+							<a href="file:///F:/ITI/Projects/JS/iti-ecommerce-project/index.html" class="logo">
+
+								<img src="./res/img/iti_logo.png" alt="">
+							</a>
+							<div class="title-logo"> logo</div>
+
+						</div>
+					</div>
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div class="halfSize">
+						<div class="header-search">
+							<form>
+								<select class="input-select">
+									<option value="0">All Categories</option>
+									<option value="1">Category 01</option>
+									<option value="1">Category 02</option>
+								</select>
+								<input class="input" placeholder="Search here">
+								<button class="search-btn">Search</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+
+					<!-- ACCOUNT -->
+					<div class="quarterSize">
+						<div class="header-ctn">
+
+							<!-- Cart -->
+							<div class="cart">
+								<a id="basket" data-toggle="dropdown" aria-expanded="true">
+									<i class="fa fa-shopping-basket"></i>
+									<span id="basketNumber">0</span>
+								</a>
+							</div>
+							<!-- /Cart -->
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- /HEADER -->
+
+	<div class="login-container">
+		<div id="login">
+			<div id="signin-form">
+				<p id="signinHead">Sign In</p>
+				<div class="signinForm_container">
+					<form action="./welcome.html" method="get">
+						<label for="username" id="username">UserName</label>
+						<input type="text" required placeholder="Enter Your Name" name="userNameInput"
+							id="yourNameInput" pattern="[A-Z]+[a-z]+{3,} [A-Z]+[a-z]+{3,}"><br>
+						<label for="password" id="password">Password</label>
+						<input type="password" id="passwordInput" required placeholder="Enter Password"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+						<br><input type="checkbox" id="show1" onclick="showpass1()">Show Password
+
+						<br> <input type="checkbox" id="rememberme1">Remember me
+						<br> <input type="submit" value="Sign in" id="signInButton" onclick="lsRememberMe()">
+					</form>
+				</div>
+			</div>
+			<div id="signup-form">
+				<p id="signupHead">Sign Up</p>
+				<div class="signupForm_container">
+					<form action="./welcome.html" method="get">
+						<label id="yourName" for="yourName">
+							Your Name</label><br>
+						<input type="text" required placeholder="Enter Your Name" name="yourNameInput"
+							id="yourNameInput" pattern="^[a-z]{3,} [a-z]{3,}$">
+						<br><label for="email" id="email">E-mail</label>
+						<br><input type="email" name="emailInput" id="emailInput" required
+							placeholder="Enter Your E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+						<br><label for="phoneNumber" id="phoneNumber">Phone Number </label>
+						<br><input type="text" name="phoneNumberInput" id="phoneNumberInput" required
+							placeholder="Enter Your Number" pattern="^(011|010|015|012)" minlength="11"
+							maxlength="11"><br>
+						<!--An <input> element with type="password" that must contain 8 or more characters that
+					   are of at least one number, and one uppercase and lowercase letter-->
+						<label for="password" id="password">Password</label><br>
+						<input type="password" id="psw" required placeholder="Enter Password"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+						<br><input type="checkbox" class="show" onclick="showpass2()">Show Password
+						<div id="message">
+							<h3>Password must contain the following:</h3>
+							<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+							<br>
+							<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+							<br>
+							<p id="number" class="invalid">A <b>number</b></p><br>
+							<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+						</div>
+						<br> <label for="re-password" id="re-password">Re-Password</label>
+						<br>
+						<input type="password" id="re-passwordInput" required placeholder="Re-enter Password"
+							pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onkeyup="checkpass()">
+						<b id="matching">Matching</b>
+						<br><input type="checkbox" class="show" onclick="showpass3()">Show Password
+						<br> <input type="checkbox" id="rememberme2">Remember me
+
+
+						<br> <input type="submit" value="Sign up" id="signupsubmit" onclick="lsRememberMe2()">
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- NEWSLETTER -->
+	<div id="newsletter" class="section">
+		<div class="newsletter_container">
+			<div class="newsletter_row">
+				<div class="fullSize">
+					<div class="newsletter">
+						<p><strong>Follow Us On Social Media</strong></p>
+						<form>
+							<input class="input" type="email" placeholder="Enter Your Email">
+							<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+						</form>
+						<ul class="newsletter-follow">
+							<li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /NEWSLETTER -->
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<!-- top footer -->
+		<div class="footer_section">
+			<div class="footer_container">
+				<div class="footer_row">
+					<div class="quarterSize">
+						<div class="footer">
+							<h3 class="footer-title">About Us</h3>
+							<p>Lorem reprehenderit alias natus, deserunt, perspiciatis recusandae velit illum? Impedit
+								laboriosam provident deleniti dolorem ea. </p>
+							<ul class="footer-links">
+								<li><a href="tel:+0201029149153"><i class="fa fa-phone"></i> +20-102-914-9153</a></li>
+								<li><a href="mailto:rondom@gmail.com"><i class="fa fa-envelope-o"></i>
+										rondom@gmail.com</a></li>
+								<li><a onclick="goPosition()"><i class="fa fa-map-marker"></i> Gleem Beach, San
+										Stefano</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="quarterSize">
+						<div class="footer">
+							<h3 class="footer-title">Categories</h3>
+							<ul class="footer-links">
+								<li><a href="#">Hot deals</a></li>
+								<li><a href="#">Laptops</a></li>
+								<li><a href="#">Smartphones</a></li>
+								<li><a href="#">Cameras</a></li>
+								<li><a href="#">Accessories</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="clearfix visible-xs"></div>
+
+					<div class="quarterSize">
+						<div class="footer">
+							<h3 class="footer-title">Information</h3>
+							<ul class="footer-links">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Orders and Returns</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="quarterSize">
+						<div class="footer">
+							<h3 class="footer-title">Service</h3>
+							<ul class="footer-links">
+								<li><a href="#">My Account</a></li>
+								<li><a href="#">View Cart</a></li>
+								<li><a href="#">Wishlist</a></li>
+								<li><a href="#">Track My Order</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /top footer -->
+
+		<!-- bottom footer -->
+		<div id="bottom-footer" class="section">
+			<div class="bottom-footer-container">
+				<div class="bottom-footer-row">
+					<div class="copyright">
+						<span class="copyright">
+							<a target="_blank" href="#">copyright Team1</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /bottom footer -->
+	</footer>
+	<!-- /FOOTER -->
+	<script src="js/main.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		var myInput = document.getElementById("psw");
+		var letter = document.getElementById("letter");
+		var capital = document.getElementById("capital");
+		var number = document.getElementById("number");
+		var length = document.getElementById("length");
+
+		// When the user clicks on the password field, show the message box
+		myInput.onfocus = function () {
+			document.getElementById("message").style.display = "block";
+		}
+
+		// When the user clicks outside of the password field, hide the message box
+		myInput.onblur = function () {
+			document.getElementById("message").style.display = "none";
+		}
+
+		// When the user starts to type something inside the password field
+		myInput.onkeyup = function () {
+			// Validate lowercase letters
+			var lowerCaseLetters = /[a-z]/g;
+			if (myInput.value.match(lowerCaseLetters)) {
+				letter.classList.remove("invalid");
+				letter.classList.add("valid");
+			} else {
+				letter.classList.remove("valid");
+				letter.classList.add("invalid");
+			}
+
+			// Validate capital letters
+			var upperCaseLetters = /[A-Z]/g;
+			if (myInput.value.match(upperCaseLetters)) {
+				capital.classList.remove("invalid");
+				capital.classList.add("valid");
+			} else {
+				capital.classList.remove("valid");
+				capital.classList.add("invalid");
+			}
+
+			// Validate numbers
+			var numbers = /[0-9]/g;
+			if (myInput.value.match(numbers)) {
+				number.classList.remove("invalid");
+				number.classList.add("valid");
+			} else {
+				number.classList.remove("valid");
+				number.classList.add("invalid");
+			}
+
+			// Validate length
+			if (myInput.value.length >= 8) {
+				length.classList.remove("invalid");
+				length.classList.add("valid");
+			} else {
+				length.classList.remove("valid");
+				length.classList.add("invalid");
+			}
+		}
+		function showpass1() {
+			var x = document.getElementById("passwordInput");
+			if (x.type === "password") {
+				x.type = "text";
+			} else {
+				x.type = "password";
+			}
+		}
+		function showpass2() {
+			var x = document.getElementById("psw");
+			if (x.type === "password") {
+				x.type = "text";
+			} else {
+				x.type = "password";
+			}
+		}
+		function showpass3() {
+			var x = document.getElementById("re-passwordInput");
+			if (x.type === "password") {
+				x.type = "text";
+			} else {
+				x.type = "password";
+			}
+		}
+		function checkpass() {
+			if (document.getElementById('psw').value ==
+				document.getElementById('re-passwordInput').value) {
+				document.getElementById('matching').style.color = 'green';
+				document.getElementById('matching').innerHTML = 'matching';
+			} else {
+				document.getElementById('matching').style.color = 'red';
+				document.getElementById('matching').innerHTML = 'not matching';
+			}
+		}
+		const rmCheck = document.getElementById("rememberme1"),
+            userInput = document.getElementById("yourNameInput");
+        if (localStorage.checkbox && localStorage.checkbox !== "") {
+            rmCheck.setAttribute("checked");
+            userInput.value = localStorage.yourNameInput;
+        } else {
+            rmCheck.removeAttribute("checked");
+            userInput.value = "";
+        }
+        function lsRememberMe() {
+            if (rmCheck.checked && userInput.value !== "") {
+                localStorage.yourNameInput = userInput.value;
+                localStorage.checkbox = rmCheck.value;
+            } else {
+                localStorage.yourNameInput = "";
+                localStorage.checkbox = "";
+            }
+        }
+		const rmChecksinUp = document.getElementById("rememberme2")
+         // userInput = document.getElementById("yourNameInput");
+        if (localStorage.checkbox && localStorage.checkbox   !== "") {
+            rmChecksinUp.setAttribute("checked");
+            userInput.value = localStorage.yourNameInput;
+        } else {
+            rmChecksinUp.removeAttribute("checked");
+            userInput.value = "";
+        }
+        function lsRememberMe2() {
+            if (rmChecksinUp.checked && userInput.value !== "") {
+                localStorage.yourNameInput = userInput.value;
+                localStorage.checkbox = rmChecksinUp.value;
+            } else {
+                localStorage.yourNameInput = "";
+                localStorage.checkbox = "";
+            }
+        }
+
+
+	</script>
+</body>
+
+</html>
